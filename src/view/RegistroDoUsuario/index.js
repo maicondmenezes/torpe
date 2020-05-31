@@ -1,10 +1,10 @@
-import React, { Component }                                 from 'react';
-import { connect }                                          from 'react-redux';
-import { changeValue, registerUser }                        from '../../store/actions/registroDoUsuario.action';
-import { _baseUrl }                                          from '../../settings/globalSettings';
-import { Button, Container, Link, TextField, Typography }   from '@material-ui/core/';
-import ExitToAppIcon                                        from '@material-ui/icons/ExitToApp';
-import { Loading, Notify, Avatar }                    from '../../components/';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { changeValue, registerUser } from '../../store/actions/registroDoUsuario.action';
+import { _baseUrl } from '../../settings/globalSettings';
+import { Button, Container, Link, TextField, Typography } from '@material-ui/core/';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import { Loading, Notify, Avatar } from '../../components/';
 
 export class RegistroDoUsuario extends Component {  
   register = () => {

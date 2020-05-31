@@ -1,7 +1,7 @@
-import { actionTypes } from '../actions/resgistroDoUsuario.action';
+import { actionTypes } from '../actions/registroDoUsuario.action';
 import initialState    from '../initialState';
 
-export default (state = initialState.resgistroDoUsuario, { type, payload }) => {
+export default (state = initialState.registroDoUsuario, { type, payload }) => {
   switch (type) {
 
     case actionTypes.CHANGE:

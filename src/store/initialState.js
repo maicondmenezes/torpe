@@ -1,7 +1,7 @@
 export default {  
-  resgistroDoUsuario : {
+  registroDoUsuario : {
     data : {
-      picture  : '/img/olgStandardAvatar.jpg',
+      picture  : '',
       name     : '',      
       email    : '',
       login    : '',

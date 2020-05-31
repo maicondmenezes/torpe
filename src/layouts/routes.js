@@ -3,10 +3,8 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 import { CircularProgressBar }                        from '../components/';
 
 const Login              = lazy( () => import('../view/Login'));
-const Anotacoes              = lazy( () => import('../view/Anotacoes'));
-const ResgistroDoUsuario           = lazy( () => import('../view/ResgistroDoUsuario'));
-const GameScreen         = lazy( () => import('../view/GameScreen'));
-const PresentationScreen = lazy( () => import('../view/PresentationScreen'));
+const Anotacoes          = lazy( () => import('../view/Anotacoes'));
+const ResgistroDoUsuario = lazy( () => import('../view/RegistroDoUsuario'));
 
 const token = localStorage.getItem('access_token');
 

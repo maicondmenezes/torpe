@@ -1,6 +1,7 @@
 import './MainScreen.css';
 import React                  from 'react'
-import Routes from '../../layouts/routes'
+// import Routes from '../../layouts/routes'
+import Anotacoes from '../Anotacoes'
 import Link from '@material-ui/core/Link'
 
 class MainScreen extends React.Component {
@@ -14,8 +15,8 @@ class MainScreen extends React.Component {
         <div className = 'SubTitle'>
           Sistema Manual de Tradução e Classificação de Termos para Analise de Sentimentos
         </div>
-        <div className='Board'>
-          <Routes />        
+        <div className='MainView'>
+          <Anotacoes />        
         </div>
         <div className='Status'>          
           <i>
