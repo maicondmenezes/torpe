@@ -5,6 +5,7 @@
 * Passos de implementação :
   - [ ] 1. Criar uma interface gráfica simples e amigavél da tela principal da aplicação;
     - [ ] 1.1 A tela de Anotações foi criada mais os componentes ainda não foram conectados ao banco de dados;
+          1.2 _A tela de anotações está com todos componentes renderizados, falta incluir somente o titulo de cada sensor de sentimento e ajustar o layout_
   - [ ] 2. Conectar as informações ao banco de dados:
     2.1 _utilizar o código do FAMA como base_
   - [ ] 3. Criar uma tela de autenticação de usuário;
