@@ -16,15 +16,15 @@ class MainScreen extends React.Component {
           Sistema Manual de Tradução e Classificação de Termos para Analise de Sentimentos
         </div>
         <div className='MainView'>
-          <Anotacoes />        
+          <Anotacoes />
         </div>
         <div className='Status'>          
           <i>
-            desenvolvido por: Maicon de Menezes | ver: <b>0.1b</b> | 
+            desenvolvido por: Maicon de Menezes | ver: <b>0.1b</b> |  
             <Link href = 'mailto: mdmoliveira@inf.ufpel.edu.br'>
-              mdmoliveira@inf.ufpel.edu.br
+                mdmoliveira@inf.ufpel.edu.br  
             </Link>
-            |
+            | 
             <b>
               maio de 2020
             </b>  
