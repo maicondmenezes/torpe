@@ -1,7 +1,7 @@
 # torpe :cursing_face:
 ## Sistema Manual de Tradução e Classificação de Termos  dos Léxicos ANEW e AFFIN para Analise de Sentimentos
 * Objetivo geral : 
-  Implementar um tradutor e classificador manual de anotações dos léxicos ANEW e AFFIN que utilize a API do Google Translate para sugerir traduções e casos de uso, além disso o sistema deve possuir ferramentas auxiliares para os anotadores compreenderem melhor o contexto de palavras e expressões idiomáticas;
+  Implementar um tradutor e classificador manual de anotações dos léxicos ANEW e AFFIN que utilize a API do Google Translate (https://cloud.google.com/translate/docs) para sugerir traduções e casos de uso, além disso o sistema deve possuir ferramentas auxiliares para os anotadores compreenderem melhor o contexto de palavras e expressões idiomáticas;
 * Passos de implementação :
   - [ ] 1. Criar uma interface gráfica simples e amigavél da tela principal da aplicação;
     - [ ] 1.1 A tela de Anotações foi criada mais os componentes ainda não foram conectados ao banco de dados;
