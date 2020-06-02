@@ -1,11 +1,13 @@
 import React, {Component}     from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
-import { IconButton, Button, Link, TextField, Typography }   from '@material-ui/core/';
+import { IconButton, TextField }   from '@material-ui/core/';
 import SaveIcon from '@material-ui/icons/Save';
-import SkipNextIcon from '@material-ui/icons/SkipNext';
-import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
+import SkipNextTwoToneIcon from '@material-ui/icons/SkipNextTwoTone';
+import SkipPreviousTwoToneIcon from '@material-ui/icons/SkipPreviousTwoTone';
 import SendIcon from '@material-ui/icons/Send';
-import Slider from '@material-ui/core/Slider';
+import SearchIcon from '@material-ui/icons/Search';
+import Sensor from './Sensor';
+import { blue } from '@material-ui/core/colors';
 
 const styles = {
   areaDeAnotacoes : {  
@@ -25,7 +27,10 @@ const styles = {
   termoAtual : {
     flex       : '1',    
     margin     : '5px',
-    width   : '100%',  
+    display: 'flex', 
+    alignItems: 'center',
+    flexDirection: 'row',
+    width   : '100%' 
   },
   termoTraduzido : {
     flex       : '1',
@@ -47,8 +52,7 @@ const styles = {
     margin : '5px',
   }, 
   traducaoAnotada : {
-    flex       : '1',    
-    margin     : '5px',
+    flex       : '1',        
     width   : '100%',
   }, 
   sentimentos : {
@@ -57,37 +61,16 @@ const styles = {
     margin     : '10px',
     flexDirection : 'column',
   },
-  satisfacao : {
-    display : 'flex',
-    flex : '1',
-    margin     : '10px',
-    flexDirections : 'row',
-  },
-  excitacao : {
-    display : 'flex',
-    flex : '1',
-    margin     : '10px',
-    flexDirections : 'row',
-  },
-  controle : {
-    display : 'flex',
-    flex : '1',
-    margin     : '10px',
-    flexDirections : 'row',
-  },
   casoDeUso : {
     flex       : '1',    
     margin     : '5px',
-    width   : '50%',    
+    width   : '50%',
+    alignSelf : 'start',
   },
   menuDeAcoes : {
     display : 'flex',
     margin     : '10px',
     flexDirection : 'row',
-  },
-  rotuloSatifacao : {
-    flex : '1',
-    width : '100%'
   },
 }
 
@@ -111,6 +94,16 @@ export class Anotacoes extends Component {
                 }}
                 fullWidth
               />
+              <IconButton 
+                variant = 'contained'
+                aria-label= 'Pesquisar'  
+                size = 'large'               
+                color = 'primary'                
+                style={{ margin : '5px', flex : '1' }}                
+                fullWidth
+              >
+                <SearchIcon style={{ color: blue[900] }}/>
+              </IconButton>
             </div>
             <div className = {classes.termoTraduzido}>
               <TextField             
@@ -142,52 +135,18 @@ export class Anotacoes extends Component {
                 fullWidth          
               />
             </div>
-            <div className = {classes.sentimentos}>
-            <Typography
-                className = {classes.rotuloSatifacao}
-                component = 'h1'
-                variant = 'h6'
-              >Satisfação
-                </Typography>
-              <div className = {classes.satisfacao} >
-              
-                <Slider 
-                  id = 'sensorDeSatifacao'
-                  defaultValue={0}            
-                  aria-labelledby='discrete-slider'
-                  valueLabelDisplay='auto'
-                  step={1}
-                  marks
-                  min={-4}
-                  max={4}
-                />
-              </div>
-              <div className = {classes.excitacao} >
-                <Slider 
-                  id = 'sensorDeExcitacao'
-                  defaultValue={0}            
-                  aria-labelledby='discrete-slider'
-                  valueLabelDisplay='auto'
-                  step={1}
-                  marks
-                  min={-4}
-                  max={4}
-                />
-              </div>
-              <div className = {classes.controle} >
-                <Slider 
-                  id = 'sensorDeControle'
-                  defaultValue={2}            
-                  aria-labelledby='discrete-slider'
-                  valueLabelDisplay='auto'
-                  step={1}
-                  marks
-                  min={-4}
-                  max={4}
-                  fullWidth
-                />
-              </div>
-            </div>
+            <Sensor
+                titulo = 'Satisfação'
+                idDoSensor = 'sensorDeSatisfacao'
+            />            
+            <Sensor
+                titulo = 'Excitação'
+                idDoSensor = 'sensorDeExcitacao'
+            />            
+            <Sensor
+                titulo = 'Controle'
+                idDoSensor = 'sensorDeControle'
+            />            
           </div>
           <div className = {classes.casoDeUso} >
             <TextField             
@@ -198,8 +157,8 @@ export class Anotacoes extends Component {
               margin     = 'normal'
               value      = 'Nesta tela vai o caso de uso para analise; que será um texto longo com algumas linhas'
               variant    = 'filled'
-              rows = '10'
-              rowsMax = '10'
+              rows = '11'
+              rowsMax = '11'
               InputProps = {{
                 readOnly: true,
               }}
@@ -210,10 +169,10 @@ export class Anotacoes extends Component {
         </div>
         <div className = {classes.menuDeAcoes}>
           <IconButton aria-label= 'Termo Anterior'>
-            <SkipPreviousIcon />
+            <SkipPreviousTwoToneIcon />
           </IconButton>
           <IconButton aria-label= 'Próximo Termo' > 
-            <SkipNextIcon />
+            <SkipNextTwoToneIcon />
           </IconButton>
           <IconButton aria-label= 'Salvar'>
             <SaveIcon />          
